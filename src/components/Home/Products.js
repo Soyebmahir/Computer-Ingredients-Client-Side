@@ -6,12 +6,20 @@ const Products = () => {
     useEffect(()=>{
         fetch('http://localhost:5000/products')
         .then(res=>res.json())
-        .then(data=>{console.log(data);})
+        .then(data=>{setProducts(data);})
     },[])
     return (
         <div>
             <p>Products part</p>
-            <Product></Product>
+            <div>
+                {
+                    products.map(product=><Product
+                    key={product._id}
+                    product ={product}
+                    ></Product>)
+                }
+            </div>
+            
         </div>
     );
 };
