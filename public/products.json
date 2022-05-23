@@ -1,0 +1,44 @@
+[
+  {
+      "name": "CPU",
+    "price": 10000,
+    "description":"A central processing unit (CPU), also called a central processor, main processor or just processor, is the electronic circuitry that executes instructions comprising a computer program.",
+   
+    "img": "https://www.howtogeek.com/wp-content/uploads/2018/10/cpu_lede.png?height=200p&trim=2,2,2,2&crop=16:9",
+    
+    "minQuantity":100,
+    "stockQuantity":1000
+  },
+  {
+      "name": "Motherboard",
+    "price": 10000,
+    "description":"It's the circuit board that connects all of your hardware to your processor, distributes electricity from your power supply, and defines the types of storage devices, memory modules, and graphics cards that can connect to your PC.",
+   
+    "img": "https://www.pcworld.com/wp-content/uploads/2021/09/shutterstock_1391898425_motherboard-100900638-orig.jpg?quality=50&strip=all",
+    
+    "minQuantity":100,
+    "stockQuantity":1000
+  },
+  {
+      "name": "Ram",
+    "price": 10000,
+    "description":"Random-access memory is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.",
+   
+    "img": "https://cdn.mos.cms.futurecdn.net/aFrdtqm8QLfdsRBkwhDjcC.jpg",
+    
+    "minQuantity":100,
+    "stockQuantity":1000
+  },
+  {
+      "name": "SSD",
+    "price": 10000,
+    "description":"A solid-state drive (SSD) used in computers. SSDs use flash-based memory, which is much faster than a traditional mechanical hard disk. ",
+   
+    "img": "https://hetmanrecovery.com/pic/blog/a134/sata-ssd.webp",
+    
+    "minQuantity":100,
+    "stockQuantity":1000
+  }
+  
+]
+
