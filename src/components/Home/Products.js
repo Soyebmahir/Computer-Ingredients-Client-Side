@@ -10,8 +10,8 @@ const Products = () => {
     },[])
     return (
         <div>
-            <p>Products part</p>
-            <div className='grid lg:grid-cols-3'>
+            <p className='text-center font-bold  text-6xl text-cyan-900 '>Tools We Provides</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5'>
                 {
                     products.map(product=><Product
                     key={product._id}

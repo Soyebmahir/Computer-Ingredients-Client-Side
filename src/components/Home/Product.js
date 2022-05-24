@@ -10,12 +10,12 @@ const Product = ({product}) => {
 
     }
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
           <img src={img} alt="Shoes" class="rounded-xl" />
         </figure>
         <div class="card-body ">
-          <h2 class="card-title text-success">Name : {name}</h2>
+          <h2 class="card-title text-cyan-900 ">Name : {name}</h2>
           <h2 class="card-title">Details :{description}</h2>
           <h2 class="card-title">Stock :{stockQuantity} Piece</h2>
           <h2 class="card-title">Minimum Order :{minQuantity}</h2>
