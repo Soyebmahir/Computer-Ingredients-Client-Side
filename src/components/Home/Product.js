@@ -10,19 +10,19 @@ const Product = ({product}) => {
 
     }
     return (
-        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img src={img} alt="Shoes" class="rounded-xl" />
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+        <figure className="px-10 pt-10">
+          <img src={img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div class="card-body ">
-          <h2 class="card-title text-cyan-900 ">Name : {name}</h2>
-          <h2 class="card-title">Details :{description}</h2>
-          <h2 class="card-title">Stock :{stockQuantity} Piece</h2>
-          <h2 class="card-title">Minimum Order :{minQuantity}</h2>
-          <h2 class="card-title">Price :{price} Per Piece</h2>
-          {/* <h2 class="card-title">{description}</h2> */}
-          <div class="card-actions">
-            <button class="btn btn-primary" onClick={()=>handlePurchase(_id)}>Place Order</button>
+        <div className="card-body ">
+          <h2 className="card-title text-cyan-900 ">Name : {name}</h2>
+          <h2 className="card-title">Details :{description}</h2>
+          <h2 className="card-title">Stock :{stockQuantity} Piece</h2>
+          <h2 className="card-title">Minimum Order :{minQuantity}</h2>
+          <h2 className="card-title">Price :{price} Per Piece</h2>
+          {/* <h2 className="card-title">{description}</h2> */}
+          <div className="card-actions">
+            <button className="btn btn-primary" onClick={()=>handlePurchase(_id)}>Place Order</button>
           </div>
         </div>
       </div>

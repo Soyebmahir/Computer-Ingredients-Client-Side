@@ -11,15 +11,15 @@ const Navbar = () => {
         signOut(auth);
     };
 
-    const menuItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/products">Products</Link></li>
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+    const menuItems = < >
+        <li className='font-bold text-3xl'><Link to="/">Home</Link></li>
+        <li className='font-bold text-3xl'><Link to="/about">About</Link></li>
+        <li className='font-bold text-3xl'><Link to="/blogs">Blogs</Link></li>
+        <li className='font-bold text-3xl'><Link to="/products">Products</Link></li>
+        
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-cyan-600">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -31,9 +31,9 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to='/home' className="btn btn-ghost normal-case text-xl text-success">Computer Ingredients</Link>
+                <Link to='/home' className="btn btn-ghost normal-case font-bold md:text-3xl  lg:text-3xl text-purple-900">Computer Ingredients</Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center  hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {
                         menuItems
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <a className="btn mx-10"><>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</></a>
             </div>
         </div>
     );
