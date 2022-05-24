@@ -16,7 +16,7 @@ const Navbar = () => {
         <li className='font-bold text-3xl'><Link to="/about">About</Link></li>
         <li className='font-bold text-3xl'><Link to="/blogs">Blogs</Link></li>
         <li className='font-bold text-3xl'><Link to="/products">Products</Link></li>
-        
+
     </>
     return (
         <div className="navbar bg-cyan-600">
@@ -41,7 +41,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn mx-10"><>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</></a>
+
+                <>{user && <button class="btn btn-ghost "><><div class="avatar">
+                    <div class="w-8 rounded mr-1">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='face'/>
+                    </div>
+                </div></>{user.displayName}</button>}</>
+                <a className="btn mr-10" ><>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</></a>
             </div>
         </div>
     );
