@@ -90,22 +90,23 @@ const Purchase = () => {
                                 type="number"
                                 defaultValue={minQuantity}
                                 placeholder="Order Quantity"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full drop-shadow-2xl"
 
                             />
                             {
-                                 quantity > stockQuantity && <p className="text-[#FF0000]">Order Less than {stockQuantity}</p>
+                                 quantity > stockQuantity && <p className="text-[#FF0000]">You've to Order Less than or equal {stockQuantity}</p>
                             }
                             {
-                                quantity < minQuantity && <p className="text-[#FF0000]">Order more than {minQuantity}</p>
+                                quantity < minQuantity && <p className="text-[#FF0000]">You've to Order more than or equal {minQuantity}</p>
                             }
-                            <input   {...register("name", { required: true })} placeholder="Name" defaultValue={user?.displayName} className="input input-bordered " />
+                            <input   {...register("name", { required: true })} placeholder="Name" defaultValue={user?.displayName} className="input input-bordered drop-shadow-2xl" />
+                            <input   {...register("email", { required: true })} placeholder="Name" defaultValue={user?.email} className="input input-bordered drop-shadow-2xl" />
 
-                            <input  {...register("address", { required: true })} placeholder="Address" type="text" className="input input-bordered " />
-                            <input  {...register("phone", { required: true })} placeholder="Phone" type="text" className="input input-bordered " />
+                            <input  {...register("address", { required: true })} placeholder="Address" type="text" className="input input-bordered drop-shadow-2xl" />
+                            <input  {...register("phone", { required: true })} placeholder="Phone" type="text" className="input input-bordered drop-shadow-2xl" />
                             <button
                                 disabled={quantity < minQuantity || quantity > stockQuantity}
-                                className="btn btn-dark"
+                                className="btn btn-dark drop-shadow-2xl"
                             >
                                 Place Order
                             </button>
