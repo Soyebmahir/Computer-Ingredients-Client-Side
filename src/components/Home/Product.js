@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const Product = ({product}) => {
-    console.log(product);
+    // console.log(product);
     const {_id,name,img,description,minQuantity,stockQuantity,price}=product
     const navigate =useNavigate()
     const handlePurchase=(id)=>{
