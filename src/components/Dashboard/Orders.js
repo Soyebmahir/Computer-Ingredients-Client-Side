@@ -36,7 +36,7 @@ const Orders = () => {
                     <tbody>
                         {
                             orders.map((order, index) =><tr>
-                                <th>{index + 1}</th>
+                                <th key={order._id}>{index + 1}</th>
                                 <td>{order.productName}</td>
                                 <td>$ {order.price}</td>
                                 <td>{order.quantity}</td>

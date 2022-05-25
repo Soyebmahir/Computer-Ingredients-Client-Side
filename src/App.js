@@ -9,6 +9,7 @@ import Profile from './components/Dashboard/Profile';
 import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import RequireAdmin from './components/Login/RequireAdmin';
 import RequireAuth from './components/Login/RequireAuth';
 import SignUp from './components/Login/SignUp';
 import Purchase from './components/Purchase';
@@ -31,7 +32,7 @@ function App() {
           <Route index element={<Orders></Orders>}></Route>
           <Route path="review" element={<AddReviews></AddReviews>}></Route>
           <Route path="profile" element={<Profile></Profile>}></Route>
-          <Route path="user" element={<Users></Users>}></Route>
+          <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
