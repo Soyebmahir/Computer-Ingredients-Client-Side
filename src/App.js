@@ -2,6 +2,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import AddReviews from './components/Dashboard/AddReviews';
 import Dashboard from './components/Dashboard/Dashboard';
 import Orders from './components/Dashboard/Orders';
@@ -14,6 +16,7 @@ import RequireAuth from './components/Login/RequireAuth';
 import SignUp from './components/Login/SignUp';
 import Purchase from './components/Purchase';
 import Navbar from './components/Shared/Navbar';
+import Payment from './components/Dashboard/Payment';
 
 function App() {
   return (
@@ -29,9 +32,10 @@ function App() {
         </Route>
         {/* nested route  */}
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
-          <Route index element={<Orders></Orders>}></Route>
+          <Route index element={<Profile></Profile>}></Route>
           <Route path="review" element={<AddReviews></AddReviews>}></Route>
-          <Route path="profile" element={<Profile></Profile>}></Route>
+          <Route path="order" element={<Orders></Orders>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
@@ -39,6 +43,7 @@ function App() {
         <Route path='signup' element={<SignUp></SignUp>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>
       </Routes>
+      <ToastContainer/>
     </div>
   );
 }

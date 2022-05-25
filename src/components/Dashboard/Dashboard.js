@@ -18,9 +18,9 @@ const [user]=useAuthState(auth)
                 <label for="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link className='font-bold text-xl' to="/dashboard">My Orders</Link></li>
-                    <li><Link className='font-bold text-xl' to="/dashboard/review">Add Review</Link></li>
-                    <li><Link className='font-bold text-xl' to="/dashboard/profile">Profile</Link></li>
+                    <li><Link className='font-bold text-xl' to="/dashboard">Profile</Link></li>
+                    {!admin && <li><Link className='font-bold text-xl' to="/dashboard/order">My Orders</Link></li>}
+                    {!admin && <li><Link className='font-bold text-xl' to="/dashboard/review">Add Review</Link></li>}
                     {admin && <li><Link className='font-bold text-xl' to="/dashboard/user">Users</Link></li>}
                 </ul>
 

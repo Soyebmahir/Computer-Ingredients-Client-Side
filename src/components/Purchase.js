@@ -24,8 +24,9 @@ const Purchase = () => {
     const { name: productName, price, img, minQuantity, stockQuantity } = product;
     const [quantity, setQuantity] = useState(parseInt(product.minQuantity));
 
-    const { register, handleSubmit,reset} = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        console.log(data);
         let order = { productName, quantity: quantity || minQuantity, img, price, name: data.name, address: data.address, phone: data.phone, email: user?.email };
         const total_price = order.quantity * order.price;
         order = { ...order, total_price };
@@ -37,7 +38,7 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
-            reset()
+        reset()
     };
     // if(errors) console.log(errors);
 
@@ -94,7 +95,7 @@ const Purchase = () => {
 
                             />
                             {
-                                 quantity > stockQuantity && <p className="text-[#FF0000]">You've to Order Less than or equal {stockQuantity}</p>
+                                quantity > stockQuantity && <p className="text-[#FF0000]">You've to Order Less than or equal {stockQuantity}</p>
                             }
                             {
                                 quantity < minQuantity && <p className="text-[#FF0000]">You've to Order more than or equal {minQuantity}</p>
