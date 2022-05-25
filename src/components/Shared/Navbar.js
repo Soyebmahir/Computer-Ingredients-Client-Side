@@ -12,10 +12,13 @@ const Navbar = () => {
     };
 
     const menuItems = < >
-        <li className='font-bold text-3xl'><Link to="/">Home</Link></li>
-        <li className='font-bold text-3xl'><Link to="/about">About</Link></li>
-        <li className='font-bold text-3xl'><Link to="/blogs">Blogs</Link></li>
-        <li className='font-bold text-3xl'><Link to="/products">Products</Link></li>
+        <li className='font-bold text-2xl'><Link to="/">Home</Link></li>
+        <li className='font-bold text-2xl'><Link to="/about">About</Link></li>
+        <li className='font-bold text-2xl'><Link to="/blogs">Blogs</Link></li>
+        <li className='font-bold text-2xl'><Link to="/products">Products</Link></li>
+        {
+            user && <li className='font-bold text-2xl'><Link to="/dashboard">Dashboard</Link></li>
+        }
 
     </>
     return (
@@ -31,7 +34,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to='/home' className="btn btn-ghost normal-case font-bold md:text-3xl  lg:text-3xl text-purple-900">Computer Ingredients</Link>
+                <Link to='/home' className="btn btn-ghost normal-case font-bold md:text-3xl  lg:text-3xl text-purple-900">Ingredients</Link>
             </div>
             <div className="navbar-center  hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -40,14 +43,22 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end ">
 
-                <>{user && <button class="btn btn-ghost "><><div class="avatar">
-                    <div class="w-8 rounded mr-1">
-                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='face'/>
-                    </div>
-                </div></>{user.displayName}</button>}</>
-                <a className="btn mr-10" ><>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</></a>
+                <div className='items-center'>
+                    <>{user && <button class="btn btn-ghost "><>
+                        <div class="avatar">
+                            <div class="w-8 rounded mr-1">
+                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='face' />
+                            </div>
+                        </div></>
+                        {user.displayName}
+                    </button>}</>
+                    <a className="btn ps-2" ><>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</></a>
+                </div>
+                <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ const Purchase = () => {
         const total_price = order.quantity * order.price;
         order = { ...order, total_price };
         console.log(order);
-        fetch('http://localhost:5000/new-order', {
+        fetch('http://localhost:5000/orders', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(order),
