@@ -49,9 +49,9 @@ const Navbar = () => {
             <div className="navbar-end ">
 
                 <div className='items-center'>
-                    <>{user && <button class="btn btn-ghost "><>
-                        <div class="avatar">
-                            <div class="w-8 rounded mr-1">
+                    <>{user && <button className="btn btn-ghost "><>
+                        <div className="avatar">
+                            <div className="w-8 rounded mr-1">
                                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='face' />
                             </div>
                         </div></>
