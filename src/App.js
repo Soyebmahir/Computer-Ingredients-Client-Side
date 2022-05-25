@@ -6,6 +6,7 @@ import AddReviews from './components/Dashboard/AddReviews';
 import Dashboard from './components/Dashboard/Dashboard';
 import Orders from './components/Dashboard/Orders';
 import Profile from './components/Dashboard/Profile';
+import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import RequireAuth from './components/Login/RequireAuth';
@@ -30,6 +31,7 @@ function App() {
           <Route index element={<Orders></Orders>}></Route>
           <Route path="review" element={<AddReviews></AddReviews>}></Route>
           <Route path="profile" element={<Profile></Profile>}></Route>
+          <Route path="user" element={<Users></Users>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
