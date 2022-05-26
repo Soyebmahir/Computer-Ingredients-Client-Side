@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -24,22 +25,56 @@ const ManageAllOrders = () => {
         }
 
     }, [user]);
+    // const handleDelete = id => {
+    //     const proceed = window.confirm('Are you sure?');
+    //     if (proceed) {
+    //         const url = `http://localhost:5000/orders/${id}`;
+    //         console.log(url);
+    //         fetch(url, {
+    //             method: 'DELETE'
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 console.log(data)
+    //                 const remaining = orders.filter(order => order._id !== id);
+    //                 setOrders(remaining);
+    //             })
+    //     }
+    // }
+
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure?');
-        if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
-            console.log(url);
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    const remaining = orders.filter(order => order._id !== id);
-                    setOrders(remaining);
-                })
-        }
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this.",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    const url =`http://localhost:5000/orders/${id}`;
+                    console.log(url);
+                    fetch(url, {
+                        method: 'DELETE'
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                            const remaining = orders.filter(order => order._id !== id);
+                            setOrders(remaining);
+                        })
+                    swal("Your order has been canceled!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Wait for customer pay!");
+                }
+            });
     }
+
+
+
+
     const handleStatus = (id) => {
         
         

@@ -3,7 +3,7 @@ import React from 'react';
 import BusinessSummary from './BusinessSummary';
 import Carousel from './Carousel';
 import Products from './Products';
-import Footer from './Footer';
+
 import Reviews from './Reviews';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
             <Products></Products>
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
-            <Footer></Footer>
+            
             
             
 
