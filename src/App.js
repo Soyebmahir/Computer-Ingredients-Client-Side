@@ -17,6 +17,8 @@ import SignUp from './components/Login/SignUp';
 import Purchase from './components/Purchase';
 import Navbar from './components/Shared/Navbar';
 import Payment from './components/Dashboard/Payment';
+import AddProducts from './components/Dashboard/AddProducts';
+import ManageAllOrders from './components/Dashboard/ManageAllOrders';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
           <Route path="order" element={<Orders></Orders>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path="addProduct" element={<RequireAdmin><AddProducts></AddProducts></RequireAdmin>}></Route>
+          <Route path="manageOrder" element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
