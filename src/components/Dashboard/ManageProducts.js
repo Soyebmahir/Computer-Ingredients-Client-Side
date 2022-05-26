@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 const ManageProducts = () => {
     const [products,setProducts]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://rocky-savannah-82621.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>{
 
@@ -25,7 +25,7 @@ const ManageProducts = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url =` http://localhost:5000/products/${id}`;
+                    const url =` https://rocky-savannah-82621.herokuapp.com/products/${id}`;
                     console.log(url);
                     fetch(url, {
                         method: 'DELETE'

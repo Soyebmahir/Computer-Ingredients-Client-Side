@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
     useEffect(() => {
         if (user) {
             console.log(user);
-            fetch('http://localhost:5000/order', {
+            fetch('https://rocky-savannah-82621.herokuapp.com/order', {
                 method: 'GET',
                 headers:{
                     "authorization": `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
     // const handleDelete = id => {
     //     const proceed = window.confirm('Are you sure?');
     //     if (proceed) {
-    //         const url = `http://localhost:5000/orders/${id}`;
+    //         const url = `https://rocky-savannah-82621.herokuapp.com/orders/${id}`;
     //         console.log(url);
     //         fetch(url, {
     //             method: 'DELETE'
@@ -52,7 +52,7 @@ const ManageAllOrders = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url =`http://localhost:5000/orders/${id}`;
+                    const url =`https://rocky-savannah-82621.herokuapp.com/orders/${id}`;
                     console.log(url);
                     fetch(url, {
                         method: 'DELETE'
@@ -78,14 +78,14 @@ const ManageAllOrders = () => {
     const handleStatus = (id) => {
         
         
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://rocky-savannah-82621.herokuapp.com/orders/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" }
             
         })
             .then(res => res.json())
             .then(data => {
-                fetch('http://localhost:5000/order', {
+                fetch('https://rocky-savannah-82621.herokuapp.com/order', {
                     method: 'GET',
                     headers:{
                         "authorization": `Bearer ${localStorage.getItem('accessToken')}`

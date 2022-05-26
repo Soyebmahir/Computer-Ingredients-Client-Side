@@ -10,7 +10,7 @@ const Orders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orders?email=${user.email}`, {
+            fetch(`https://rocky-savannah-82621.herokuapp.com/orders?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -24,7 +24,7 @@ const Orders = () => {
     /* const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://rocky-savannah-82621.herokuapp.com/orders/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'
@@ -49,7 +49,7 @@ const Orders = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    const url =` http://localhost:5000/orders/${id}`;
+                    const url =` https://rocky-savannah-82621.herokuapp.com/orders/${id}`;
                     console.log(url);
                     fetch(url, {
                         method: 'DELETE'

@@ -10,7 +10,7 @@ const AddReviews = () => {
     const onSubmit = async data => {
         console.log(data);
         const product = { name: data.name, email: data.email, rating: data.rating, review: data.review }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://rocky-savannah-82621.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
