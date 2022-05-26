@@ -53,14 +53,14 @@ const Profile = () => {
     return (
         // min-h-screen
         <div>
-            <h1 class="text-5xl font-bold text-center mb-2">My Profile</h1>
+            <h1 className="text-5xl font-bold text-center mb-2">My Profile</h1>
 
-            <div class="hero  bg-base-200">
+            <div className="hero  bg-base-200">
 
-                <div class="hero-content flex-col lg:flex-row">
-                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='profile' class="max-w-sm rounded-lg shadow-2xl" />
+                <div className="hero-content flex-col lg:flex-row">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/human.png" alt='profile' className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
-                        <h1 class="text-5xl font-bold">{singleUser?.name}</h1>
+                        <h1 className="text-5xl font-bold">{singleUser?.name}</h1>
                         <p className='text-3xl'><span className='font-bold'>LinkedIn:</span> {singleUser?.linkedIn}</p>
                         <p className='text-3xl'><span className='font-bold'>Email Address:</span> {singleUser?.email}</p>
                         <p className='text-3xl'><span className='font-bold'>Education:</span> {singleUser?.education}</p>
