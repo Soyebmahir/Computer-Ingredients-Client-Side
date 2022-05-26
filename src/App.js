@@ -19,10 +19,11 @@ import Navbar from './components/Shared/Navbar';
 import Payment from './components/Dashboard/Payment';
 import AddProducts from './components/Dashboard/AddProducts';
 import ManageAllOrders from './components/Dashboard/ManageAllOrders';
+import Portfolio from './components/Portfolio';
 
 function App() {
   return (
-    <div>
+    <div className='container mx-auto'>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -43,6 +44,7 @@ function App() {
           <Route path="manageOrder" element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>

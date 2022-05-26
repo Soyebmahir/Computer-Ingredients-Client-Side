@@ -18,7 +18,7 @@ const Navbar = () => {
         <li className='font-bold text-2xl'><Link to="/">Home</Link></li>
         <li className='font-bold text-2xl'><Link to="/about">About</Link></li>
         <li className='font-bold text-2xl'><Link to="/blogs">Blogs</Link></li>
-        <li className='font-bold text-2xl'><Link to="/products">Products</Link></li>
+        <li className='font-bold text-2xl'><Link to="/portfolio">Portfolio</Link></li>
         {
             user && <li className='font-bold text-2xl'><Link to="/dashboard">Dashboard</Link></li>
         }
@@ -37,7 +37,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to='/home' className="btn btn-ghost normal-case font-bold md:text-3xl  lg:text-3xl text-purple-900">Ingredients</Link>
+                <Link to='/home' className="btn btn-ghost normal-case font-bold md:text-3xl  lg:text-3xl text-purple-900">Ingredients Ltd</Link>
             </div>
             <div className="navbar-center  hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
