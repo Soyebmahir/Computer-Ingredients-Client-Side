@@ -15,12 +15,12 @@ const Navbar = () => {
     };
 
     const menuItems = < >
-        <li className='font-bold text-2xl'><Link to="/">Home</Link></li>
-        <li className='font-bold text-2xl'><Link to="/about">About</Link></li>
-        <li className='font-bold text-2xl'><Link to="/blogs">Blogs</Link></li>
-        <li className='font-bold text-2xl'><Link to="/portfolio">Portfolio</Link></li>
+        <li className='font-bold text-2xl text-gray-900'><Link to="/">Home</Link></li>
+        <li className='font-bold text-2xl text-gray-900'><Link to="/about">About</Link></li>
+        <li className='font-bold text-2xl text-gray-900'><Link to="/blogs">Blogs</Link></li>
+        <li className='font-bold text-2xl text-gray-900'><Link to="/portfolio">Portfolio</Link></li>
         {
-            user && <li className='font-bold text-2xl'><Link to="/dashboard">Dashboard</Link></li>
+            user && <li className='font-bold text-2xl text-gray-900'><Link to="/dashboard">Dashboard</Link></li>
         }
 
     </>
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end ">
 
-                <div className='items-center'>
+                <div className='items-center text-black'>
                     <>{user && <button className="btn btn-ghost "><>
                         <div className="avatar">
                             <div className="w-8 rounded mr-1">
