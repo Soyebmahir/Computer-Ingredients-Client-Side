@@ -24,6 +24,7 @@ const [user]=useAuthState(auth)
                     {admin && <li><Link className='font-bold text-xl' to="/dashboard/user">Users</Link></li>}
                     {admin && <li><Link className='font-bold text-xl' to="/dashboard/addProduct">Add Products</Link></li>}
                     {admin && <li><Link className='font-bold text-xl' to="/dashboard/manageOrder">Manage Orders</Link></li>}
+                    {admin && <li><Link className='font-bold text-xl' to="/dashboard/manageProduct">Manage Products</Link></li>}
                 </ul>
 
             </div>

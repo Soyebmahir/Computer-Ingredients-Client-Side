@@ -16,7 +16,6 @@ const Navbar = () => {
 
     const menuItems = < >
         <li className='font-bold text-2xl text-gray-900'><Link to="/">Home</Link></li>
-        <li className='font-bold text-2xl text-gray-900'><Link to="/about">About</Link></li>
         <li className='font-bold text-2xl text-gray-900'><Link to="/blogs">Blogs</Link></li>
         <li className='font-bold text-2xl text-gray-900'><Link to="/portfolio">Portfolio</Link></li>
         {
